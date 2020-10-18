@@ -33,7 +33,7 @@ if(empty($_SESSION['admin'])){
                       </script>' ?>;
             } else {
 
-                <?= '<!-- Row form Start -->
+                <!-- Row form Start -->
 				<div class="row jarak-card">
 				    <div class="col m12">
                         <div class="card">
@@ -48,17 +48,17 @@ if(empty($_SESSION['admin'])){
         				                <tr>
         				                    <td width="13%">Nomor</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%">' . $row['no_cek'] . '</td>
+        				                    <td width="86%"> <?php echo .$row['no_cek']. ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Tipe</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%">' . $row['tipe'] . '</td>
+        				                    <td width="86%"> <?= .$row['tipe']. ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Nama</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%">' . $row['nama_cek'] . '</td>
+        				                    <td width="86%"><?= .$row['nama_cek']. ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">File</td>
