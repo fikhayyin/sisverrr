@@ -77,7 +77,7 @@ if (empty($_SESSION['admin'])) {
                                         <?php
                                         if ($_SESSION['admin'] == 1) {
                                             <?= "<strong>Super Admin</strong>. Anda memiliki akses penuh terhadap sistem."?>;
-                                        } elseif ($_SESSION['admin'] == 2) {
+                                        } else if ($_SESSION['admin'] == 2) {
                                             <?= "<strong>Administrator</strong>. Berikut adalah statistik data yang tersimpan dalam sistem."?>;
                                         } else {
                                             <?= "<strong>Staff</strong>. Berikut adalah statistik data yang tersimpan dalam sistem."?>;
