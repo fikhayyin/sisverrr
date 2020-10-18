@@ -53,7 +53,7 @@ if (empty($_SESSION['admin'])) {
             				                Apakah Anda yakin akan menghapus pengguna ini?</div>
             				            </thead>
 
-<!--             				            <tbody>
+            				            <tbody>
             				                <tr>
             				                    <td width="13%">Username</td>
             				                    <td width="1%">:</td>
@@ -62,12 +62,12 @@ if (empty($_SESSION['admin'])) {
             				                <tr>
             				                    <td width="13%">Nama</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%"><?= $row['nama'] ?></td>
+            				                    <?= "<td width="86%">" .$row['nama']. "</td>" ?>
             				                </tr>
             				                <tr>
             				                    <td width="13%">NIP</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%"><?= $row['nip'] ?></td>
+            				                    <?= "<td width="86%">" .$row['NIP']. "</td>" ?>
             				                </tr>
             				                <tr>
             				                    <td width="13%">Tipe User</td>
@@ -78,9 +78,9 @@ if (empty($_SESSION['admin'])) {
                         if ($row['admin'] == 3) {
                             $row['admin'] = "User Biasa";
                         }
-                    } -->
+                    }
          
-            				                    <td width="86%"><?= $row['admin'] ?></td>
+            				                   <?= "<td width="86%">" .$row['admin']. "</td>" ?>
             				                </tr>
             				            </tbody>
             				   		</table>
