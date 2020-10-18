@@ -8,10 +8,10 @@ if (empty($_SESSION['admin'])) {
 
     $id_user = mysqli_real_escape_string($config, $_REQUEST['id_user']);
     if ($id_user == 1) {
-        echo '<script language="javascript">
+        echo "<script language="javascript">
                     window.alert("ERROR! Super Admin tidak boleh dihapus");
                     window.location.href="./admin.php?page=kel&sub=usr";
-                  </script>';
+                  </script>";
     } else {
 
         if ($id_user == $_SESSION['id_user']) {
