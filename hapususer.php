@@ -41,7 +41,7 @@ if (empty($_SESSION['admin'])) {
                 $no = 1;
                 while ($row = mysqli_fetch_array($query)) {
 
-                    echo '
+                    
                     <!-- Row form Start -->
     				<div class="row jarak-card">
     				    <div class="col m12">
@@ -57,17 +57,17 @@ if (empty($_SESSION['admin'])) {
             				                <tr>
             				                    <td width="13%">Username</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%">' . $row['username'] . '</td>
+            				                    <td width="86%"><?= $row['username'] ?></td>
             				                </tr>
             				                <tr>
             				                    <td width="13%">Nama</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%">' . $row['nama'] . '</td>
+            				                    <td width="86%"><?= $row['nama'] ?></td>
             				                </tr>
             				                <tr>
             				                    <td width="13%">NIP</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%">' . $row['nip'] . '</td>
+            				                    <td width="86%"><?= $row['nip'] ?></td>
             				                </tr>
             				                <tr>
             				                    <td width="13%">Tipe User</td>
@@ -79,8 +79,8 @@ if (empty($_SESSION['admin'])) {
                             $row['admin'] = "User Biasa";
                         }
                     }
-                    echo '
-            				                    <td width="86%">' . $row['admin'] . '</td>
+         
+            				                    <td width="86%"><?= $row['admin'] ?></td>
             				                </tr>
             				            </tbody>
             				   		</table>
@@ -92,7 +92,7 @@ if (empty($_SESSION['admin'])) {
                             </div>
                         </div>
                     </div>
-        			<!-- Row form END -->';
+        			<!-- Row form END -->;
 
                     if (isset($_REQUEST['submit'])) {
                         $id_user = $_REQUEST['id_user'];
@@ -101,7 +101,7 @@ if (empty($_SESSION['admin'])) {
 
                         if ($query == true) {
                             $_SESSION['succDel'] = 'SUKSES! User berhasil dihapus<br/>';
-                            header("Location: ./admin.php?page=kel&sub=usr");
+                            header('Location: ./admin.php?page=kel&sub=usr');
                             die();
                         } else {
                             $_SESSION['errQ'] = 'ERROR! Ada masalah dengan query';
