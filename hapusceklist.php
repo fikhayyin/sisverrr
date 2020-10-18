@@ -48,17 +48,17 @@ if(empty($_SESSION['admin'])){
         				                <tr>
         				                    <td width="13%">Nomor</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"> <?= .$row['no_cek']. ?> </td>
+        				                    <td width="86%"> <?= $row['no_cek'] ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Tipe</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"> <?= .$row['tipe']. ?> </td>
+        				                    <td width="86%"> <?= $row['tipe'] ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Nama</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"><?= .$row['nama_cek']. ?> </td>
+        				                    <td width="86%"><?= $row['nama_cek'] ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">File</td>
@@ -74,22 +74,22 @@ if(empty($_SESSION['admin'])){
         				                <tr>
         				                    <td width="13%">Hasil laporan</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"><?= . $row['hasil'] . ?></td>
+        				                    <td width="86%"><?= $row['hasil'] ?></td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Area</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"><?= . $row['area'] . ?></td>
+        				                    <td width="86%"><?= $row['area'] ?></td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">Tanggal laporan</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"><?= . indoDate($row['tgl_lpr']) . ?></td>
+        				                    <td width="86%"><?=  indoDate($row['tgl_lpr']) ?></td>
         				                </tr>
                                         <tr>
                                             <td width="13%">Keterangan</td>
                                             <td width="1%">:</td>
-                                            <td width="86%"><?= . $row['keterangan'] . ?></td>
+                                            <td width="86%"><?= $row['keterangan'] ?></td>
                                         </tr>
         				            </tbody>
     				   		    </table>
