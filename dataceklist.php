@@ -30,7 +30,7 @@ if (empty($_SESSION['admin'])) {
             $curr = ($pg - 1) * $limit;
         }
 
-        echo '
+        <?= '
                     <!-- Row Start -->
                     <div class="row">
                         <!-- Secondary Nav START -->
@@ -52,7 +52,7 @@ if (empty($_SESSION['admin'])) {
                     <!-- Row END -->
 
                     <!-- Row form Start -->
-                    <div class="row jarak-form">';
+                    <div class="row jarak-form">' ?>;
 
         if (isset($_REQUEST['submit'])) {
 
@@ -66,7 +66,7 @@ if (empty($_SESSION['admin'])) {
 
                 $query = mysqli_query($config, "SELECT * FROM checklist WHERE tgl_lpr BETWEEN '$dari_tanggal' AND '$sampai_tanggal' ORDER By id_cek DESC LIMIT 10");
 
-                echo '<!-- Row form Start -->
+                <?= '<!-- Row form Start -->
                             <div class="row jarak-form black-text">
                                 <form class="col s12" method="post" action="">
                                     <div class="input-field col s3">
@@ -91,12 +91,12 @@ if (empty($_SESSION['admin'])) {
                             <div class="row agenda">
                                 <div class="col s12"><p class="warna agenda">Galeri laporan checklist antara tanggal <strong>' . indoDate($dari_tanggal) . '</strong> sampai dengan tanggal <strong>' . indoDate($sampai_tanggal) . '</strong></p>
                                 </div>
-                            </div>';
+                            </div>' ?>;
 
                 if (mysqli_num_rows($query) > 0) {
                     while ($row = mysqli_fetch_array($query)) {
                         if (empty($row['file'])) {
-                            echo '';
+                            <?= '' ?>;
                         } else {
 
                             $ekstensi = array('jpg', 'png', 'jpeg');
@@ -106,11 +106,11 @@ if (empty($_SESSION['admin'])) {
                             $eks = strtolower(end($x));
 
                             if (in_array($eks, $ekstensi) == true) {
-                                echo '
+                                <?= '
                                             <div class="col m3">
                                                 <img class="galeri materialboxed" data-caption="' . indoDate($row['tgl_catat']) . '" src="./upload/ceklist/' . $row['file'] . '"/>
                                                 <a class="btn light-green darken-1" href="?page=dlc&act=fcl&id_cek=' . $row['id_cek'] . '">Tampilkan Ukuran Penuh</a>
-                                            </div>';
+                                            </div> ' ?>;
                             } else {
 
                                 if (in_array($eks, $ekstensi2) == true) {
