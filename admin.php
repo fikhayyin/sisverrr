@@ -72,7 +72,7 @@ if (empty($_SESSION['admin'])) {
                         <div class="col s12">
                             <div class="card">
                                 <div class="card-content">
-                                    <h4>Selamat Datang <?= echo $_SESSION['nama']; ?></h4>
+                                    <h4>Selamat Datang <?= $_SESSION['nama']; ?></h4>
                                     <p class="description">Anda login sebagai
                                         <?php
                                         if ($_SESSION['admin'] == 1) {
