@@ -57,7 +57,7 @@ if (empty($_SESSION['admin'])) {
             				                <tr>
             				                    <td width="13%">Username</td>
             				                    <td width="1%">:</td>
-            				                    <td width="86%"><?= $row['username'] ?></td>
+            				                    <?= "<td width="86%">" .$row['username']. "</td>" ?>
             				                </tr>
             				                <tr>
             				                    <td width="13%">Nama</td>
