@@ -74,7 +74,7 @@ if (empty($_SESSION['admin'])) {
                                 <div class="card-content">
                                     <h4>Selamat Datang <?= echo $_SESSION['nama']; ?></h4>
                                     <p class="description">Anda login sebagai
-                                        <?=
+                                        <?php
                                         if ($_SESSION['admin'] == 1) {
                                             <?= "<strong>Super Admin</strong>. Anda memiliki akses penuh terhadap sistem."?>;
                                         } elseif ($_SESSION['admin'] == 2) {
