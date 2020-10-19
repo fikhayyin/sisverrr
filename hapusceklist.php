@@ -53,12 +53,12 @@ if(empty($_SESSION['admin'])){
         				                <tr>
         				                    <td width="13%">Tipe</td>
         				                    <td width="1%">:</td>
-        				                    <td width="86%"> <?= .$row['Tipe']. ?> </td>
+        				                    <td width="86%"> <?= .$row['Tipe']. ?> </td
         				                </tr>
         				                <tr>
         				                    <td width="13%">Nama</td>
         				                    <td width="1%">:</td>
-        				                   <td width="86%"> <?= .$row['Nama']. ?> </td>
+        				                   <td width="86%"> <?= .$row['nama_cek']. ?> </td>
         				                </tr>
         				                <tr>
         				                    <td width="13%">File</td>
