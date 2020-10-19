@@ -144,7 +144,7 @@ if (empty($_SESSION['admin'])) {
         <!-- Main END -->
 
         <!-- Include Footer START -->
-        <?php include('include/footer.php'); ?>
+        <?= include('include/footer.php'); ?>
         <!-- Include Footer END -->
 
     </body>
