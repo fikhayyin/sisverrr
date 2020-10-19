@@ -8,10 +8,10 @@ if (empty($_SESSION['admin'])) {
 } else {
 
     if ($_REQUEST['id_user'] == 1) {
-        echo '<script language="javascript">
+        <?= '<script language="javascript">
                     window.alert("ERROR! Super Admin tidak boleh diedit");
                     window.location.href="./admin.php?page=kel&sub=usr";
-                  </script>';
+                  </script>' ?>;
     } else {
 
         if ($_REQUEST['id_user'] == $_SESSION['id_user']) {
